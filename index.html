@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebSmartBD — Public Repositories & Open Source Directory</title>
+  <meta name="description" content="Explore all public GitHub repositories and open-source projects by WebSmartBD (Md. Shifat). Fullstack web apps, AI tools, developer utilities, and backend systems." />
+  <meta name="keywords" content="WebSmartBD, Md Shifat, GitHub public repositories, open source bangladesh, qresto, claude-switch, poselens, authia, clip-manager" />
+  <meta name="author" content="Md. Shifat (WebSmartBD)" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WebSmartBD — Public Repositories & Open Source Directory" />
+  <meta property="og:description" content="Comprehensive index of all public GitHub repositories, live projects, and tools created by WebSmartBD." />
+  <meta property="og:url" content="https://websmartbd.github.io/" />
+  <meta property="og:site_name" content="WebSmartBD Repository Hub" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WebSmartBD — Public Repositories Index" />
+  <meta name="twitter:description" content="Discover 24+ open source tools, web apps, and AI applications by WebSmartBD." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+    .modal-backdrop {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data for Search Engine Indexing -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Md. Shifat",
+    "alternateName": "WebSmartBD",
+    "jobTitle": "Full-Stack Developer & Entrepreneur",
+    "url": "https://bmshifat.pro.bd/",
+    "sameAs": [
+      "https://github.com/websmartbd",
+      "mailto:bmshifat0@gmail.com"
+    ]
+  },
+  "hasPart": {
+    "@type": "ItemList",
+    "name": "Public Repositories of WebSmartBD",
+    "description": "Curated index of all public GitHub repositories and open-source projects by WebSmartBD.",
+    "numberOfItems": 24,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "QResto",
+          "alternateName": "qresto",
+          "description": "Modern, bilingual (Bengali & English) QR code restaurant menu, table-side ordering & real-time kitchen management system with Supabase backend and offline demo mode.",
+          "codeRepository": "https://github.com/websmartbd/qresto",
+          "programmingLanguage": "HTML",
+          "applicationCategory": "Web & Fullstack Apps",
+          "url": "https://qresto.asf.run/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Claude-Switch",
+          "alternateName": "Claude-Switch",
+          "description": "The definitive multi-account switcher and rate-limit manager for Claude.ai. Seamlessly switch accounts in one click or keyboard shortcut, track quota resets in real time, and receive desktop notifications.",
+          "codeRepository": "https://github.com/websmartbd/Claude-Switch",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "DevTools & CLI",
+          "url": "https://claudeswitch.vercel.app"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Swarm",
+          "alternateName": "swarm",
+          "description": "\"Don't just show your website. Make it move.\" Dynamic visual motion, cursor physics, and particle interaction library for interactive web applications.",
+          "codeRepository": "https://github.com/websmartbd/swarm",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "Frontend & Creative",
+          "url": "https://swarm-dusky.vercel.app"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Clip Manager",
+          "alternateName": "clip-manager",
+          "description": "Lightweight clipboard history manager for Linux (GNOME/Ubuntu) built with Python and GTK3. Bring the intuitive Win+V clipboard experience to Linux with instant fuzzy search and pinning.",
+          "codeRepository": "https://github.com/websmartbd/clip-manager",
+          "programmingLanguage": "Python",
+          "applicationCategory": "DevTools & CLI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Authia",
+          "alternateName": "Authia",
+          "description": "Lightweight, ultra-secure licensing framework for PHP developers. Provides a complete solution for managing, generating, and validating software licenses and domain authentication.",
+          "codeRepository": "https://github.com/websmartbd/Authia",
+          "programmingLanguage": "PHP",
+          "applicationCategory": "Backend & Security",
+          "url": "https://authia.hs.vc/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "PoseLens",
+          "alternateName": "PoseLens",
+          "description": "Point your camera at any scene and get guided with the ideal photography pose in real time. Features computer vision pose estimation for stunning portrait photography.",
+          "codeRepository": "https://github.com/websmartbd/PoseLens",
+          "programmingLanguage": "TypeScript",
+          "applicationCategory": "AI & Machine Learning",
+          "url": "https://poselens.pro.bd"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "DevPack",
+          "alternateName": "devpack",
+          "description": "Easy self-hosted PHP web hosting management panel with automatic subdomains, MySQL databases, and SSL certificates directly from your web browser.",
+          "codeRepository": "https://github.com/websmartbd/devpack",
+          "programmingLanguage": "PHP",
+          "applicationCategory": "DevTools & CLI"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "WebSmartBD Hub",
+          "alternateName": "websmartbd",
+          "description": "Official GitHub developer hub and profile repository for WebSmartBD (Md. Shifat) showcasing open-source tools, live demos, and technical contributions.",
+          "codeRepository": "https://github.com/websmartbd/websmartbd",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "Ecosystem & Profile",
+          "url": "https://github.com/websmartbd"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "VoxGen",
+          "alternateName": "VoxGen",
+          "description": "High-performance, privacy-focused Text-to-Speech (TTS) application leveraging Cartesia AI's Sonic-3 engine for near-zero latency streaming audio generation.",
+          "codeRepository": "https://github.com/websmartbd/VoxGen",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "AI & Machine Learning",
+          "url": "https://voxgen.pro.bd/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "AstraMail",
+          "alternateName": "AstraMail",
+          "description": "Professional, self-contained email marketing and automation platform engineered for high deliverability without requiring any SQL database (pure JSON architecture).",
+          "codeRepository": "https://github.com/websmartbd/AstraMail",
+          "programmingLanguage": "PHP",
+          "applicationCategory": "Backend & Security"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "SalamiPay",
+          "alternateName": "salami",
+          "description": "Interactive Eid celebration web app where users claim unique personal URLs (সালামির.পাতা.বাংলা/username) to receive digital Eid salami with festive animations and bKash/Nagad integration.",
+          "codeRepository": "https://github.com/websmartbd/salami",
+          "programmingLanguage": "PHP",
+          "applicationCategory": "Web & Fullstack Apps",
+          "url": "https://সালামির.পাতা.বাংলা/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Namaz Guide",
+          "alternateName": "namaz-guide",
+          "description": "Beautifully designed glassmorphic web application for learning how to perform daily prayers, complete with Arabic recitation text, pronunciation guide, and Bengali translation.",
+          "codeRepository": "https://github.com/websmartbd/namaz-guide",
+          "programmingLanguage": "CSS",
+          "applicationCategory": "Regional & Lifestyle",
+          "url": "https://namaz-guides.vercel.app"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Rangpur Roza",
+          "alternateName": "rangpur-roza",
+          "description": "Accurate Sehri and Iftar timetable application specifically tuned for Gaibandha, Rangpur, and 8 northern districts of Bangladesh with live countdown timers and audio alerts.",
+          "codeRepository": "https://github.com/websmartbd/rangpur-roza",
+          "programmingLanguage": "CSS",
+          "applicationCategory": "Regional & Lifestyle",
+          "url": "https://rangpur-roza.vercel.app"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Routine Tool",
+          "alternateName": "Routine-Tool",
+          "description": "High-performance, JSON-driven academic routine web application for students of the Philosophy Department at Carmichael College, Rangpur with real-time class tracking.",
+          "codeRepository": "https://github.com/websmartbd/Routine-Tool",
+          "programmingLanguage": "HTML",
+          "applicationCategory": "Web & Fullstack Apps"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Login Register Woo",
+          "alternateName": "-Login-Register-Woo",
+          "description": "Streamlined custom frontend authentication, modal registration, and payment gateway enhancement plugin for WordPress WooCommerce stores.",
+          "codeRepository": "https://github.com/websmartbd/-Login-Register-Woo",
+          "programmingLanguage": "PHP",
+          "applicationCategory": "E-Commerce & WordPress"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "ParentWeb",
+          "alternateName": "ParentWeb",
+          "description": "Cloud-based Android parental safety management suite powered by Node.js. Features live GPS logging, ambient microphone recording, app logs, and device control.",
+          "codeRepository": "https://github.com/websmartbd/ParentWeb",
+          "programmingLanguage": "Smali",
+          "applicationCategory": "Mobile & Security",
+          "url": "https://demo-parentweb.glitch.me"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "ReplicaChat",
+          "alternateName": "ReplicaChat",
+          "description": "Generates conversational AI chatbots that emulate the tone, slang, vocabulary, and communication style of real individuals analyzed from sample chat histories.",
+          "codeRepository": "https://github.com/websmartbd/ReplicaChat",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "AI & Machine Learning"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "AI Writing Assistant",
+          "alternateName": "AI-Writing-Assistant",
+          "description": "Intelligent writing assistant powered by Google Generative AI to assist storytellers, copywriters, and bloggers with real-time multilingual ideas in English and Bengali.",
+          "codeRepository": "https://github.com/websmartbd/AI-Writing-Assistant",
+          "programmingLanguage": "HTML",
+          "applicationCategory": "AI & Machine Learning",
+          "url": "https://ai-writing-assistants.onrender.com/"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Potro-Link",
+          "alternateName": "Potro-Link",
+          "description": "Unified newspaper directory and RSS/link aggregator routing readers to leading Bangladeshi newspapers, e-papers, and online portals in one fast interface.",
+          "codeRepository": "https://github.com/websmartbd/Potro-Link",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "Web & Fullstack Apps"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Product Origin Detector",
+          "alternateName": "Israeli-product-detector",
+          "description": "Consumer awareness tool and database allowing shoppers to check brand ownership, corporate origins, and barcode numbers to support ethical and conscious buying choices.",
+          "codeRepository": "https://github.com/websmartbd/Israeli-product-detector",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "Web & Fullstack Apps"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "AI Pickup Line Generator",
+          "alternateName": "Ai-Pickup-Line-Generator",
+          "description": "Fun AI-driven web application crafting witty, contextual, clever, and humorous icebreakers and pickup lines tailored to varied themes and personalities.",
+          "codeRepository": "https://github.com/websmartbd/Ai-Pickup-Line-Generator",
+          "programmingLanguage": "HTML",
+          "applicationCategory": "AI & Machine Learning",
+          "url": "https://ai-pickup-line-generator.onrender.com"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Philosopher Quotes",
+          "alternateName": "Philosopher-Quotes",
+          "description": "Interactive philosophical repository allowing readers to discover wisdom, aphorisms, and insights from Socrates, Plato, Rumi, Nietzsche, and other great thinkers.",
+          "codeRepository": "https://github.com/websmartbd/Philosopher-Quotes",
+          "programmingLanguage": "HTML",
+          "applicationCategory": "Regional & Lifestyle",
+          "url": "https://philosopher-quotes.vercel.app"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Weather Report",
+          "alternateName": "Weather-Report",
+          "description": "Dynamic weather forecast application featuring location mapping, city search, 7-day extended forecasts, and Redux/SessionStorage caching to minimize network overhead.",
+          "codeRepository": "https://github.com/websmartbd/Weather-Report",
+          "programmingLanguage": "JavaScript",
+          "applicationCategory": "Web & Fullstack Apps",
+          "url": "https://weathereport.vercel.app"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "item": {
+          "@type": "SoftwareSourceCode",
+          "name": "Domain Validator Plugin",
+          "alternateName": "Domain-Validator-Plugin",
+          "description": "Lightweight PHP plugin to validate domain names against criteria, check DNS records and availability, and connect securely with license validation endpoints.",
+          "codeRepository": "https://github.com/websmartbd/Domain-Validator-Plugin",
+          "programmingLanguage": "PHP",
+          "applicationCategory": "Backend & Security"
+        }
+      }
+    ]
+  }
+}
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen font-sans antialiased selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- Background Subtle Grid Pattern -->
+  <div class="fixed inset-0 pointer-events-none opacity-40 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+
+  <!-- Main Container -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col min-h-screen">
+
+    <!-- Top Navigation / Brand Bar -->
+    <header class="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-slate-200/90">
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-400 p-0.5 shadow-md shadow-amber-500/10">
+          <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center font-mono font-bold text-amber-600 text-lg">
+            WS
+          </div>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+            WebSmartBD
+            <span class="px-2 py-0.5 text-xs font-mono font-semibold rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+              Open Source Index
+            </span>
+          </h1>
+          <p class="text-xs text-slate-500 font-mono">by Md. Shifat • Bangladesh 🇧🇩</p>
+        </div>
+      </div>
+
+      <!-- Social & Direct Profile Links -->
+      <nav aria-label="External profiles" class="flex items-center flex-wrap gap-2 text-xs font-mono">
+        <a href="https://github.com/websmartbd" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 shadow-sm transition-colors flex items-center gap-1.5 font-medium">
+          <svg class="w-4 h-4 fill-slate-800" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a href="https://bmshifat.pro.bd/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 shadow-sm transition-colors flex items-center gap-1.5 font-medium">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Website
+        </a>
+        <a href="mailto:bmshifat0@gmail.com" class="px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 shadow-sm transition-colors flex items-center gap-1.5 font-medium">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+        <a href="https://buymeacha.com/bmshifat" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-900 shadow-sm transition-colors flex items-center gap-1.5 font-semibold">
+          ☕ Buy me a cha
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero / Headline Section -->
+    <section class="pt-8 pb-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+          Public Repositories & <br />
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600">
+            Open Source Index
+          </span>
+        </h2>
+        <p class="mt-3.5 text-base sm:text-lg text-slate-600 leading-relaxed">
+          A live catalog indexing all 24 public repositories by <span class="text-slate-900 font-semibold">WebSmartBD</span>. Synthesized directly from every repository's README file—complete with live demo links, architecture highlights, tech stacks, and source code.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+        <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-600 font-mono" id="stat-total-repos">24</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1 font-semibold">Public Repositories</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-mono">14</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1 font-semibold">Live Deployed Apps</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-sky-600 font-mono">6+</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1 font-semibold">Languages & Stacks</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-purple-600 font-mono">100%</div>
+          <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mt-1 font-semibold">Open Source</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clean Sticky Category Tabs Bar (Top search & other filters removed as requested) -->
+    <section class="sticky top-4 z-30 mb-8 p-2 sm:p-2.5 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-sm flex items-center justify-between gap-3 flex-wrap">
+      <div class="flex items-center gap-1.5 overflow-x-auto py-1 text-xs font-mono scrollbar-none" id="category-filters">
+        <button class="category-btn px-3.5 py-2 rounded-xl font-bold whitespace-nowrap transition-all cursor-pointer bg-slate-900 text-white shadow-sm" data-category="all">
+          All Projects (<span id="count-all">24</span>)
+        </button>
+        <button class="category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900" data-category="Web & Fullstack Apps">
+          Web & Fullstack (<span id="count-web">7</span>)
+        </button>
+        <button class="category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900" data-category="AI & Machine Learning">
+          AI & Machine Learning (<span id="count-ai">5</span>)
+        </button>
+        <button class="category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900" data-category="DevTools & CLI">
+          DevTools & CLI (<span id="count-devtools">3</span>)
+        </button>
+        <button class="category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900" data-category="Backend & Security">
+          Backend & Security (<span id="count-backend">3</span>)
+        </button>
+        <button class="category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900" data-category="Regional & Lifestyle">
+          Regional & Lifestyle (<span id="count-regional">3</span>)
+        </button>
+        <button class="category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900" data-category="Others">
+          Other Projects (<span id="count-others">3</span>)
+        </button>
+      </div>
+
+      <div class="text-xs font-mono text-slate-500 px-2 flex items-center gap-1.5">
+        <span>Showing:</span>
+        <span id="active-result-count" class="font-bold text-amber-600">24</span>
+        <span>repositories</span>
+      </div>
+    </section>
+
+    <!-- Repository Cards Grid Container -->
+    <main id="repo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" role="list" aria-label="Repositories list">
+      <!-- Rendered dynamically by JavaScript -->
+    </main>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden py-16 text-center flex-col items-center justify-center">
+      <div class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-slate-400 mb-4 border border-slate-200 shadow-sm">
+        <svg class="w-8 h-8 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <h3 class="text-lg font-bold text-slate-800">No repositories found in this category</h3>
+      <button onclick="resetCategory()" class="mt-4 px-4 py-2 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold font-mono hover:bg-amber-400 transition-colors shadow-sm">
+        View All Projects
+      </button>
+    </div>
+
+    <!-- Repository Details Modal -->
+    <div id="repo-modal" class="fixed inset-0 z-50 hidden modal-backdrop bg-slate-900/40 flex items-center justify-center p-4 sm:p-6 overflow-y-auto" role="dialog" aria-modal="true">
+      <div class="relative w-full max-w-2xl bg-white border border-slate-200 rounded-2xl shadow-2xl p-6 sm:p-8 overflow-hidden text-left">
+        <!-- Close button -->
+        <button id="modal-close-btn" class="absolute top-5 right-5 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 hover:text-slate-900 hover:bg-slate-200 flex items-center justify-center transition-colors cursor-pointer">
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <div id="modal-content">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-12 opacity-0 transition-all duration-200 pointer-events-none bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-xl text-xs font-mono flex items-center gap-2">
+      <svg class="w-4 h-4 text-emerald-400 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <span id="toast-message">Copied to clipboard</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto pt-16 pb-8 border-t border-slate-200 text-xs text-slate-500 font-mono flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        Built for <a href="https://github.com/websmartbd/websmartbd" class="text-amber-600 hover:underline font-bold">websmartbd</a> repository • Indexed from public README files
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="font-medium text-slate-700">Md. Shifat (WebSmartBD)</span>
+        <span>•</span>
+        <a href="https://bmshifat.pro.bd/" target="_blank" rel="noopener" class="text-slate-600 hover:text-amber-600 font-medium transition-colors">bmshifat.pro.bd</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript Client Engine -->
+  <script>
+    // Injected repository catalog data
+    const repositories = [{"id": "qresto", "name": "qresto", "title": "QResto", "subtitle": "QR Code Restaurant Menu, Table-side Ordering & Kitchen Display", "category": "Web & Fullstack Apps", "description": "Modern, bilingual (Bengali & English) QR code restaurant menu, table-side ordering & real-time kitchen management system with Supabase backend and offline demo mode.", "features": ["Bilingual UI (Bengali & English)", "Table-side QR code ordering", "Real-time kitchen management display", "Supabase integration & offline demo mode"], "tech": ["JavaScript", "Tailwind CSS", "Supabase", "HTML5"], "highlight": true, "primaryLanguage": "HTML", "stars": 0, "forks": 0, "homepageUrl": "https://qresto.asf.run/", "url": "https://github.com/websmartbd/qresto", "pushedAt": "2026-11-24T10:44:36Z", "createdAt": "2026-11-23T06:26:23Z"}, {"id": "Claude-Switch", "name": "Claude-Switch", "title": "Claude-Switch", "subtitle": "Multi-Account Switcher & Rate-Limit Manager for Claude.ai", "category": "DevTools & CLI", "description": "The definitive multi-account switcher and rate-limit manager for Claude.ai. Seamlessly switch accounts in one click or keyboard shortcut, track quota resets in real time, and receive desktop notifications.", "features": ["1-click account switching & keyboard shortcuts", "Real-time rate-limit & quota reset countdowns", "Desktop notifications upon limit reset", "Session persistence with zero credential leakage"], "tech": ["JavaScript", "Chrome Extension", "Browser APIs", "Vite"], "highlight": true, "primaryLanguage": "JavaScript", "stars": 0, "forks": 0, "homepageUrl": "https://claudeswitch.vercel.app", "url": "https://github.com/websmartbd/Claude-Switch", "pushedAt": "2026-11-21T09:50:54Z", "createdAt": "2026-11-20T10:45:39Z"}, {"id": "swarm", "name": "swarm", "title": "Swarm", "subtitle": "Interactive Web Animation & Kinetic Canvas Engine", "category": "Frontend & Creative", "description": "\"Don't just show your website. Make it move.\" Dynamic visual motion, cursor physics, and particle interaction library for interactive web applications.", "features": ["Kinetic cursor and particle interactions", "Zero-dependency lightweight canvas rendering", "Configurable physics and visual themes", "Smooth 60fps responsive scaling"], "tech": ["JavaScript", "HTML5 Canvas", "CSS3 Animation"], "highlight": false, "primaryLanguage": "JavaScript", "stars": 0, "forks": 0, "homepageUrl": "https://swarm-dusky.vercel.app", "url": "https://github.com/websmartbd/swarm", "pushedAt": "2026-11-08T15:50:01Z", "createdAt": "2026-11-08T15:49:17Z"}, {"id": "clip-manager", "name": "clip-manager", "title": "Clip Manager", "subtitle": "Windows-Style (Super+V) Clipboard History for Linux", "category": "DevTools & CLI", "description": "Lightweight clipboard history manager for Linux (GNOME/Ubuntu) built with Python and GTK3. Bring the intuitive Win+V clipboard experience to Linux with instant fuzzy search and pinning.", "features": ["Super+V instant floating popup", "Real-time fuzzy search across history", "Pin favorite snippets permanently", "One-click copy and auto-paste into active window"], "tech": ["Python", "GTK3", "GNOME Desktop", "Linux"], "highlight": true, "primaryLanguage": "Python", "stars": 0, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/clip-manager", "pushedAt": "2026-10-04T12:29:43Z", "createdAt": "2026-10-04T12:28:42Z"}, {"id": "Authia", "name": "Authia", "title": "Authia", "subtitle": "High-Performance PHP Software Licensing & Domain Auth", "category": "Backend & Security", "description": "Lightweight, ultra-secure licensing framework for PHP developers. Provides a complete solution for managing, generating, and validating software licenses and domain authentication.", "features": ["Set-it-and-forget-it license validation", "Domain binding & tamper resistance", "Cryptographically signed license keys", "Zero-overhead client integration library"], "tech": ["PHP", "Cryptography", "REST API", "MySQL"], "highlight": true, "primaryLanguage": "PHP", "stars": 1, "forks": 1, "homepageUrl": "https://authia.hs.vc/", "url": "https://github.com/websmartbd/Authia", "pushedAt": "2026-07-21T09:57:36Z", "createdAt": "2026-02-14T07:53:09Z"}, {"id": "PoseLens", "name": "PoseLens", "title": "PoseLens", "subtitle": "AI-Powered Real-Time Photography Pose Assistant", "category": "AI & Machine Learning", "description": "Point your camera at any scene and get guided with the ideal photography pose in real time. Features computer vision pose estimation for stunning portrait photography.", "features": ["Real-time camera pose guidance", "AI posture detection and landmark scoring", "Category-based pose libraries (Solo, Model, Couple)", "Mobile-optimized progressive web app"], "tech": ["TypeScript", "MediaPipe AI", "React", "Tailwind CSS"], "highlight": true, "primaryLanguage": "TypeScript", "stars": 1, "forks": 0, "homepageUrl": "https://poselens.pro.bd", "url": "https://github.com/websmartbd/PoseLens", "pushedAt": "2026-07-15T15:31:00Z", "createdAt": "2026-06-08T15:39:34Z"}, {"id": "devpack", "name": "devpack", "title": "DevPack", "subtitle": "Browser-Based Self-Hosted PHP & MySQL Hosting Panel", "category": "DevTools & CLI", "description": "Easy self-hosted PHP web hosting management panel with automatic subdomains, MySQL databases, and SSL certificates directly from your web browser.", "features": ["Automated subdomains and virtual host configs", "One-click MySQL database creation & management", "Browser-based administration dashboard", "Automatic Let's Encrypt SSL provisioning"], "tech": ["PHP", "Nginx", "MySQL", "Bash", "Linux"], "highlight": false, "primaryLanguage": "PHP", "stars": 1, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/devpack", "pushedAt": "2026-06-30T11:07:27Z", "createdAt": "2026-06-30T10:45:37Z"}, {"id": "websmartbd", "name": "websmartbd", "title": "WebSmartBD Hub", "subtitle": "Developer Profile, Portfolio & Ecosystem Hub", "category": "Ecosystem & Profile", "description": "Official GitHub developer hub and profile repository for WebSmartBD (Md. Shifat) showcasing open-source tools, live demos, and technical contributions.", "features": ["Central portfolio directory", "Automated repo index and live catalog", "Curated project showcase and contact links", "Structured developer metadata & SEO indexing"], "tech": ["HTML5", "CSS3", "JavaScript", "GitHub API"], "highlight": false, "primaryLanguage": "JavaScript", "stars": 1, "forks": 0, "homepageUrl": "https://github.com/websmartbd", "url": "https://github.com/websmartbd/websmartbd", "pushedAt": "2026-05-24T23:02:47Z", "createdAt": "2025-03-04T14:44:35Z"}, {"id": "VoxGen", "name": "VoxGen", "title": "VoxGen", "subtitle": "Studio-Grade Low-Latency AI Text-To-Speech Studio", "category": "AI & Machine Learning", "description": "High-performance, privacy-focused Text-to-Speech (TTS) application leveraging Cartesia AI's Sonic-3 engine for near-zero latency streaming audio generation.", "features": ["Low-latency streaming chunked audio playback", "Sonic-3 high-fidelity voice engine", "Emotion, speed, and tone controls", "Direct audio export to MP3/WAV format"], "tech": ["JavaScript", "Cartesia AI", "Web Audio API", "Node.js"], "highlight": true, "primaryLanguage": "JavaScript", "stars": 3, "forks": 0, "homepageUrl": "https://voxgen.pro.bd/", "url": "https://github.com/websmartbd/VoxGen", "pushedAt": "2026-05-16T13:41:42Z", "createdAt": "2026-03-29T13:41:22Z"}, {"id": "AstraMail", "name": "AstraMail", "title": "AstraMail", "subtitle": "Zero-DB High-Deliverability Email Marketing Platform", "category": "Backend & Security", "description": "Professional, self-contained email marketing and automation platform engineered for high deliverability without requiring any SQL database (pure JSON architecture).", "features": ["Zero-DB flat JSON architecture", "Multi-SMTP load balancing and rotation", "Real-time open & click observability", "Automated subscriber segmentation"], "tech": ["PHP 7.4+", "JSON Engine", "SMTP", "Tailwind CSS"], "highlight": true, "primaryLanguage": "PHP", "stars": 1, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/AstraMail", "pushedAt": "2026-05-09T06:07:18Z", "createdAt": "2026-05-05T19:17:04Z"}, {"id": "salami", "name": "salami", "title": "SalamiPay", "subtitle": "Personalized Digital Eid Salami & Greeting Platform", "category": "Web & Fullstack Apps", "description": "Interactive Eid celebration web app where users claim unique personal URLs (সালামির.পাতা.বাংলা/username) to receive digital Eid salami with festive animations and bKash/Nagad integration.", "features": ["Personalized short URLs with Bangla IDN support", "Direct bKash and Nagad payment integration", "Interactive confetti and festive audio celebrations", "Leaderboard and salami counter"], "tech": ["PHP", "Tailwind CSS", "MFS Gateways", "JavaScript"], "highlight": true, "primaryLanguage": "PHP", "stars": 1, "forks": 0, "homepageUrl": "https://সালামির.পাতা.বাংলা/", "url": "https://github.com/websmartbd/salami", "pushedAt": "2026-04-01T18:22:35Z", "createdAt": "2026-04-01T17:07:21Z"}, {"id": "namaz-guide", "name": "namaz-guide", "title": "Namaz Guide", "subtitle": "Step-by-Step Salah Learning & Islamic Prayer Guide", "category": "Regional & Lifestyle", "description": "Beautifully designed glassmorphic web application for learning how to perform daily prayers, complete with Arabic recitation text, pronunciation guide, and Bengali translation.", "features": ["Step-by-step illustrations for all 5 daily prayers", "Includes Witr, Tahajjud, and Ishraq guides", "Arabic text with Bengali transliteration and translation", "Modern mobile-first glassmorphic UI"], "tech": ["HTML5", "CSS3 Glassmorphism", "JavaScript"], "highlight": true, "primaryLanguage": "CSS", "stars": 1, "forks": 0, "homepageUrl": "https://namaz-guides.vercel.app", "url": "https://github.com/websmartbd/namaz-guide", "pushedAt": "2026-02-21T20:52:17Z", "createdAt": "2026-02-21T20:34:06Z"}, {"id": "rangpur-roza", "name": "rangpur-roza", "title": "Rangpur Roza", "subtitle": "Ramadan Sehri & Iftar Timetable for North Bengal", "category": "Regional & Lifestyle", "description": "Accurate Sehri and Iftar timetable application specifically tuned for Gaibandha, Rangpur, and 8 northern districts of Bangladesh with live countdown timers and audio alerts.", "features": ["8 North Bengal district selector", "Live Sehri and Iftar countdown timers", "Islamic prayers & Ramadan daily Duas", "Lightweight offline-capable PWA support"], "tech": ["HTML5", "Tailwind CSS", "JavaScript"], "highlight": true, "primaryLanguage": "CSS", "stars": 1, "forks": 0, "homepageUrl": "https://rangpur-roza.vercel.app", "url": "https://github.com/websmartbd/rangpur-roza", "pushedAt": "2026-02-19T09:06:00Z", "createdAt": "2026-02-19T08:27:45Z"}, {"id": "Routine-Tool", "name": "Routine-Tool", "title": "Routine Tool", "subtitle": "Carmichael College Philosophy Dept Class Routine Viewer", "category": "Web & Fullstack Apps", "description": "High-performance, JSON-driven academic routine web application for students of the Philosophy Department at Carmichael College, Rangpur with real-time class tracking.", "features": ["1st to 4th year and Masters schedule selector", "Live class indicator based on current time", "Teacher and room allocation details", "Instant mobile-friendly access"], "tech": ["HTML5", "JSON Data Store", "JavaScript", "CSS3"], "highlight": false, "primaryLanguage": "HTML", "stars": 1, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/Routine-Tool", "pushedAt": "2026-01-15T12:46:23Z", "createdAt": "2026-01-07T12:14:35Z"}, {"id": "-Login-Register-Woo", "name": "-Login-Register-Woo", "title": "Login Register Woo", "subtitle": "Custom WooCommerce Frontend Auth & Checkout Addon", "category": "E-Commerce & WordPress", "description": "Streamlined custom frontend authentication, modal registration, and payment gateway enhancement plugin for WordPress WooCommerce stores.", "features": ["Clean popup login and registration modal", "Mobile OTP and email verification hooks", "Checkout redirect optimizations", "WooCommerce hook compatibility"], "tech": ["PHP", "WordPress", "WooCommerce", "jQuery"], "highlight": false, "primaryLanguage": "PHP", "stars": 0, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/-Login-Register-Woo", "pushedAt": "2025-09-21T19:39:19Z", "createdAt": "2025-09-21T19:38:50Z"}, {"id": "ParentWeb", "name": "ParentWeb", "title": "ParentWeb", "subtitle": "Cloud-Based Android Device Safety & Parental Monitoring", "category": "Mobile & Security", "description": "Cloud-based Android parental safety management suite powered by Node.js. Features live GPS logging, ambient microphone recording, app logs, and device control.", "features": ["Real-time GPS tracking and geofencing", "Live ambient audio monitor and recording", "Notification monitor (WhatsApp, Messenger, SMS)", "Remote file manager and command queuing"], "tech": ["Node.js", "Android (Smali/Java)", "WebSockets", "Express"], "highlight": true, "primaryLanguage": "Smali", "stars": 1, "forks": 0, "homepageUrl": "https://demo-parentweb.glitch.me", "url": "https://github.com/websmartbd/ParentWeb", "pushedAt": "2025-07-26T05:44:39Z", "createdAt": "2025-03-02T13:55:04Z"}, {"id": "ReplicaChat", "name": "ReplicaChat", "title": "ReplicaChat", "subtitle": "AI Conversational Persona & Chat Style Replicator", "category": "AI & Machine Learning", "description": "Generates conversational AI chatbots that emulate the tone, slang, vocabulary, and communication style of real individuals analyzed from sample chat histories.", "features": ["Linguistic pattern & vocabulary analysis", "Sentiment and emotional cadence matching", "Configurable response temperature and creativity", "Web chat interface with streaming text"], "tech": ["JavaScript", "Node.js", "NLP", "OpenAI / Gemini API"], "highlight": false, "primaryLanguage": "JavaScript", "stars": 1, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/ReplicaChat", "pushedAt": "2025-06-29T04:28:53Z", "createdAt": "2025-06-25T10:46:19Z"}, {"id": "AI-Writing-Assistant", "name": "AI-Writing-Assistant", "title": "AI Writing Assistant", "subtitle": "Bilingual Creative Storytelling & Content Generator", "category": "AI & Machine Learning", "description": "Intelligent writing assistant powered by Google Generative AI to assist storytellers, copywriters, and bloggers with real-time multilingual ideas in English and Bengali.", "features": ["Real-time next-paragraph suggestions", "Bilingual English and Bengali fluency", "Tone presets (Fiction, Professional, Casual)", "Export directly to text or markdown"], "tech": ["HTML5", "JavaScript", "Google Gemini API", "CSS3"], "highlight": false, "primaryLanguage": "HTML", "stars": 0, "forks": 0, "homepageUrl": "https://ai-writing-assistants.onrender.com/", "url": "https://github.com/websmartbd/AI-Writing-Assistant", "pushedAt": "2025-06-16T14:17:17Z", "createdAt": "2025-06-16T07:40:29Z"}, {"id": "Potro-Link", "name": "Potro-Link", "title": "Potro-Link", "subtitle": "Bangladeshi National Daily News Aggregator & Link Router", "category": "Web & Fullstack Apps", "description": "Unified newspaper directory and RSS/link aggregator routing readers to leading Bangladeshi newspapers, e-papers, and online portals in one fast interface.", "features": ["Instant search across 50+ national & local newspapers", "Direct access to official e-paper editions", "Categorized by language (Bangla / English)", "Zero-distraction lightweight reader"], "tech": ["Node.js", "JavaScript", "Express", "HTML5"], "highlight": false, "primaryLanguage": "JavaScript", "stars": 0, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/Potro-Link", "pushedAt": "2025-06-02T15:04:12Z", "createdAt": "2025-06-02T14:29:55Z"}, {"id": "Israeli-product-detector", "name": "Israeli-product-detector", "title": "Product Origin Detector", "subtitle": "Conscious Consumer Brand & Barcode Checker", "category": "Web & Fullstack Apps", "description": "Consumer awareness tool and database allowing shoppers to check brand ownership, corporate origins, and barcode numbers to support ethical and conscious buying choices.", "features": ["Barcode and brand name search database", "Alternative local product suggestions", "Community-verified brand ownership records", "Mobile camera barcode scanner support"], "tech": ["Node.js", "Express", "JSON Dataset", "JavaScript"], "highlight": false, "primaryLanguage": "JavaScript", "stars": 0, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/Israeli-product-detector", "pushedAt": "2025-04-09T19:49:48Z", "createdAt": "2025-04-09T19:47:50Z"}, {"id": "Ai-Pickup-Line-Generator", "name": "Ai-Pickup-Line-Generator", "title": "AI Pickup Line Generator", "subtitle": "Humorous & Romantic Contextual Line Generator", "category": "AI & Machine Learning", "description": "Fun AI-driven web application crafting witty, contextual, clever, and humorous icebreakers and pickup lines tailored to varied themes and personalities.", "features": ["Multiple mood categories (Clever, Cheesy, Nerdy, Wholesome)", "One-click copy to clipboard", "Shareable quote card generator", "Instant regeneration with varied AI seeds"], "tech": ["HTML5", "CSS3", "Node.js", "Generative AI"], "highlight": false, "primaryLanguage": "HTML", "stars": 0, "forks": 0, "homepageUrl": "https://ai-pickup-line-generator.onrender.com", "url": "https://github.com/websmartbd/Ai-Pickup-Line-Generator", "pushedAt": "2025-03-14T14:59:03Z", "createdAt": "2025-03-14T13:43:26Z"}, {"id": "Philosopher-Quotes", "name": "Philosopher-Quotes", "title": "Philosopher Quotes", "subtitle": "Curated Timeless Wisdom from Renowned Philosophers", "category": "Regional & Lifestyle", "description": "Interactive philosophical repository allowing readers to discover wisdom, aphorisms, and insights from Socrates, Plato, Rumi, Nietzsche, and other great thinkers.", "features": ["Search quotes by thinker or philosophical topic", "Daily philosophical reflection picker", "Clean distraction-free typography", "Social card sharing and copy feature"], "tech": ["HTML5", "CSS3", "JavaScript", "JSON"], "highlight": false, "primaryLanguage": "HTML", "stars": 0, "forks": 0, "homepageUrl": "https://philosopher-quotes.vercel.app", "url": "https://github.com/websmartbd/Philosopher-Quotes", "pushedAt": "2024-05-20T09:10:30Z", "createdAt": "2024-05-19T17:11:53Z"}, {"id": "Weather-Report", "name": "Weather-Report", "title": "Weather Report", "subtitle": "Interactive Global Weather Forecaster with Redux Caching", "category": "Web & Fullstack Apps", "description": "Dynamic weather forecast application featuring location mapping, city search, 7-day extended forecasts, and Redux/SessionStorage caching to minimize network overhead.", "features": ["Automatic geolocation weather discovery", "Redux store + sessionStorage caching layer", "7-day forecast modal with rich weather indicators", "Interactive animations and responsive UI"], "tech": ["React", "Redux", "OpenWeather API", "CSS3"], "highlight": false, "primaryLanguage": "JavaScript", "stars": 0, "forks": 0, "homepageUrl": "https://weathereport.vercel.app", "url": "https://github.com/websmartbd/Weather-Report", "pushedAt": "2024-04-30T17:53:29Z", "createdAt": "2024-04-30T17:36:00Z"}, {"id": "Domain-Validator-Plugin", "name": "Domain-Validator-Plugin", "title": "Domain Validator Plugin", "subtitle": "WordPress & PHP Domain Verification Utility", "category": "Backend & Security", "description": "Lightweight PHP plugin to validate domain names against criteria, check DNS records and availability, and connect securely with license validation endpoints.", "features": ["Domain syntax and DNS validation", "Integration with custom licensing APIs", "WordPress hook support", "Lightweight zero-dependency architecture"], "tech": ["PHP", "WordPress API", "cURL", "DNS Resolver"], "highlight": false, "primaryLanguage": "PHP", "stars": 0, "forks": 0, "homepageUrl": "", "url": "https://github.com/websmartbd/Domain-Validator-Plugin", "pushedAt": "2024-04-19T20:20:40Z", "createdAt": "2024-04-13T08:20:25Z"}];
+
+    // State
+    let selectedCategory = 'all';
+
+    // DOM Elements
+    const repoGrid = document.getElementById('repo-grid');
+    const emptyState = document.getElementById('empty-state');
+    const categoryContainer = document.getElementById('category-filters');
+    const resultCount = document.getElementById('active-result-count');
+    const repoModal = document.getElementById('repo-modal');
+    const modalContent = document.getElementById('modal-content');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const toast = document.getElementById('toast');
+    const toastMessage = document.getElementById('toast-message');
+
+    // Language Light Badge Styling
+    const langColors = {
+      'JavaScript': 'bg-amber-50 text-amber-800 border-amber-200',
+      'PHP': 'bg-indigo-50 text-indigo-800 border-indigo-200',
+      'TypeScript': 'bg-sky-50 text-sky-800 border-sky-200',
+      'Python': 'bg-emerald-50 text-emerald-800 border-emerald-200',
+      'HTML': 'bg-rose-50 text-rose-800 border-rose-200',
+      'CSS': 'bg-cyan-50 text-cyan-800 border-cyan-200',
+      'Smali': 'bg-purple-50 text-purple-800 border-purple-200',
+      'HTML/CSS': 'bg-rose-50 text-rose-800 border-rose-200'
+    };
+
+    // Category Counts
+    function updateCategoryCounts() {
+      const counts = {
+        'all': repositories.length,
+        'Web & Fullstack Apps': 0,
+        'AI & Machine Learning': 0,
+        'DevTools & CLI': 0,
+        'Backend & Security': 0,
+        'Regional & Lifestyle': 0,
+        'Others': 0
+      };
+
+      repositories.forEach(r => {
+        if (counts[r.category] !== undefined) {
+          counts[r.category]++;
+        } else {
+          counts['Others']++;
+        }
+      });
+
+      if (document.getElementById('count-all')) document.getElementById('count-all').innerText = counts['all'];
+      if (document.getElementById('count-web')) document.getElementById('count-web').innerText = counts['Web & Fullstack Apps'];
+      if (document.getElementById('count-ai')) document.getElementById('count-ai').innerText = counts['AI & Machine Learning'];
+      if (document.getElementById('count-devtools')) document.getElementById('count-devtools').innerText = counts['DevTools & CLI'];
+      if (document.getElementById('count-backend')) document.getElementById('count-backend').innerText = counts['Backend & Security'];
+      if (document.getElementById('count-regional')) document.getElementById('count-regional').innerText = counts['Regional & Lifestyle'];
+      if (document.getElementById('count-others')) document.getElementById('count-others').innerText = counts['Others'];
+    }
+
+    // Filter Logic
+    function getFilteredRepositories() {
+      return repositories.filter(repo => {
+        if (selectedCategory === 'all') return true;
+        if (selectedCategory === 'Others') {
+          const mainCats = ['Web & Fullstack Apps', 'AI & Machine Learning', 'DevTools & CLI', 'Backend & Security', 'Regional & Lifestyle'];
+          return !mainCats.includes(repo.category);
+        }
+        return repo.category === selectedCategory;
+      }).sort((a, b) => {
+        if (a.highlight && !b.highlight) return -1;
+        if (!a.highlight && b.highlight) return 1;
+        return b.stars - a.stars;
+      });
+    }
+
+    // Render repository cards in clean light theme
+    function render() {
+      const filtered = getFilteredRepositories();
+      resultCount.innerText = filtered.length;
+
+      if (filtered.length === 0) {
+        repoGrid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+
+      repoGrid.innerHTML = filtered.map(repo => {
+        const langBadgeClass = langColors[repo.primaryLanguage] || 'bg-slate-100 text-slate-700 border-slate-200';
+        const hasLive = Boolean(repo.homepageUrl);
+
+        return `
+          <article class="group relative rounded-2xl bg-white hover:bg-amber-50/20 border border-slate-200/90 hover:border-amber-400/80 p-5 sm:p-6 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md">
+            <div>
+              <!-- Header badges -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-600 font-medium">
+                  ${repo.category}
+                </span>
+                <div class="flex items-center gap-1.5">
+                  ${repo.stars > 0 ? `
+                    <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200 flex items-center gap-1 font-semibold">
+                      ★ ${repo.stars}
+                    </span>
+                  ` : ''}
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded-md border font-semibold ${langBadgeClass}">
+                    ${repo.primaryLanguage || 'Code'}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Title & Repo Name -->
+              <h3 class="text-base font-bold text-slate-900 group-hover:text-amber-600 transition-colors flex items-center justify-between">
+                <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                  ${repo.title}
+                </a>
+              </h3>
+              <p class="text-xs font-mono text-slate-500 mt-0.5">websmartbd/${repo.name}</p>
+
+              <!-- Description -->
+              <p class="mt-3 text-xs text-slate-600 leading-relaxed line-clamp-3">
+                ${repo.description}
+              </p>
+
+              <!-- Tech Stack Chips -->
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                ${repo.tech.slice(0, 4).map(t => `
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-[10px] font-mono text-slate-600 font-medium">
+                    ${t}
+                  </span>
+                `).join('')}
+                ${repo.tech.length > 4 ? `
+                  <span class="px-1.5 py-0.5 rounded-md bg-slate-100 text-[10px] font-mono text-slate-500 font-medium">
+                    +${repo.tech.length - 4}
+                  </span>
+                ` : ''}
+              </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between gap-2 text-xs font-mono">
+              <div class="flex items-center gap-2">
+                ${hasLive ? `
+                  <a href="${repo.homepageUrl}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold flex items-center gap-1.5 transition-colors shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                    Live Demo
+                  </a>
+                ` : ''}
+                <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-medium flex items-center gap-1.5 transition-colors shadow-sm">
+                  GitHub
+                  <svg class="w-3 h-3 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+              <button onclick="openDetailsModal('${repo.name}')" class="px-2.5 py-1.5 rounded-lg text-slate-500 hover:text-amber-700 hover:bg-slate-100 font-medium transition-colors cursor-pointer">
+                Details →
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Modal Details Renderer
+    window.openDetailsModal = function(repoName) {
+      const repo = repositories.find(r => r.name === repoName);
+      if (!repo) return;
+
+      modalContent.innerHTML = `
+        <div class="space-y-5">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-100 text-amber-800 border border-amber-300 font-semibold">
+                ${repo.category}
+              </span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-semibold">
+                ${repo.primaryLanguage || 'Code'}
+              </span>
+              ${repo.stars > 0 ? `<span class="text-xs font-mono px-2 py-0.5 rounded bg-amber-50 text-amber-700 font-bold border border-amber-200">★ ${repo.stars} stars</span>` : ''}
+            </div>
+            <h2 class="text-2xl font-extrabold text-slate-900">${repo.title}</h2>
+            <p class="text-xs font-mono text-slate-500 mt-1">Repository: websmartbd/${repo.name}</p>
+          </div>
+
+          <p class="text-sm text-slate-700 leading-relaxed">
+            ${repo.description}
+          </p>
+
+          <div>
+            <h4 class="text-xs uppercase font-mono tracking-wider text-amber-700 font-bold mb-2.5">Key Features (From README)</h4>
+            <ul class="space-y-1.5 text-xs text-slate-600">
+              ${repo.features.map(f => `
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-500 font-bold">•</span>
+                  <span>${f}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase font-mono tracking-wider text-slate-500 font-bold mb-2">Tech Stack & Tools</h4>
+            <div class="flex flex-wrap gap-1.5">
+              ${repo.tech.map(t => `
+                <span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 font-medium">
+                  ${t}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Quick Clone Command Box -->
+          <div>
+            <h4 class="text-xs uppercase font-mono tracking-wider text-slate-500 font-bold mb-1.5">Git Clone</h4>
+            <div class="flex items-center justify-between px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl font-mono text-xs text-slate-800">
+              <code class="overflow-x-auto text-amber-700 font-semibold">git clone ${repo.url}.git</code>
+              <button onclick="copyText('git clone ${repo.url}.git', 'Clone command copied!')" class="ml-2 px-3 py-1 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-[11px] font-bold cursor-pointer transition-colors">
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="pt-4 border-t border-slate-200 flex items-center justify-between gap-3 text-xs font-mono">
+            <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium flex items-center gap-2 transition-colors shadow-sm">
+              Open GitHub Repo
+              <svg class="w-3.5 h-3.5 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            ${repo.homepageUrl ? `
+              <a href="${repo.homepageUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold flex items-center gap-2 transition-colors shadow-sm">
+                Launch Live Demo
+                <svg class="w-3.5 h-3.5 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            ` : ''}
+          </div>
+        </div>
+      `;
+
+      repoModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+
+    function closeModal() {
+      repoModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    repoModal.addEventListener('click', (e) => {
+      if (e.target === repoModal) closeModal();
+    });
+
+    // Clipboard Copy Helper
+    window.copyText = function(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        toastMessage.innerText = msg || 'Copied to clipboard';
+        toast.classList.remove('translate-y-12', 'opacity-0');
+        setTimeout(() => {
+          toast.classList.add('translate-y-12', 'opacity-0');
+        }, 2200);
+      });
+    };
+
+    // Category button handling
+    categoryContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('.category-btn');
+      if (!btn) return;
+
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.className = 'category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900';
+      });
+
+      btn.className = 'category-btn px-3.5 py-2 rounded-xl font-bold whitespace-nowrap transition-all cursor-pointer bg-slate-900 text-white shadow-sm';
+      selectedCategory = btn.getAttribute('data-category');
+      render();
+    });
+
+    window.resetCategory = function() {
+      selectedCategory = 'all';
+      document.querySelectorAll('.category-btn').forEach(b => {
+        if (b.getAttribute('data-category') === 'all') {
+          b.className = 'category-btn px-3.5 py-2 rounded-xl font-bold whitespace-nowrap transition-all cursor-pointer bg-slate-900 text-white shadow-sm';
+        } else {
+          b.className = 'category-btn px-3.5 py-2 rounded-xl font-medium whitespace-nowrap transition-all cursor-pointer bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900';
+        }
+      });
+      render();
+    };
+
+    // Keyboard Shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // Initial setup
+    updateCategoryCounts();
+    render();
+  </script>
+</body>
+</html>
