@@ -29,8 +29,8 @@
 :root{--bg:#fafafa;--w:#fff;--ink:#09090b;--t2:#3f3f46;--t3:#52525b;--t4:#71717a;--ln:#e4e4e7;--ln2:#f4f4f5;--z9:#18181b;--g:#34d399;
 --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overscroll-behavior-y:none}
-body{font:400 15px/1.6 var(--sans);background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
+html{scroll-padding-top:112px;scroll-behavior:smooth;-webkit-text-size-adjust:100%;overscroll-behavior-y:none}
+body{padding-top:56px;font:400 15px/1.6 var(--sans);background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 ::selection{background:var(--z9);color:#fff}
 :focus-visible{outline:2px solid var(--z9);outline-offset:2px;border-radius:6px}
@@ -38,7 +38,7 @@ a{color:inherit}
 @media(min-width:640px){.in{padding:0 24px}}
 
 /* navbar */
-.nav{position:sticky;top:0;z-index:40;height:56px;background:#fff;box-shadow:0 1px 0 var(--ln);-webkit-transform:translateZ(0);transform:translateZ(0)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;height:56px;background:#fff;box-shadow:0 1px 0 var(--ln)}
 @media(min-width:768px){.nav{background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}}
 .nav .in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none}
@@ -78,7 +78,9 @@ h1{font:700 clamp(24px,5.2vw,36px)/1.15 var(--sans);letter-spacing:-.025em;color
 @media(min-width:640px){.stats span{font-size:11px}}
 
 /* filters */
-.fbar{position:sticky;top:56px;z-index:30;background:#fafafa;border-bottom:1px solid var(--ln);padding:10px 0;margin-bottom:16px;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.fslot{margin-bottom:16px;min-height:61px}
+.fbar{z-index:30;background:#fafafa;border-bottom:1px solid var(--ln);padding:10px 0}
+.fbar.stuck{position:fixed;top:56px;left:0;right:0}
 @media(min-width:768px){.fbar{background:rgba(250,250,250,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}}
 .fbar .in{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .chips{display:flex;gap:6px;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;min-width:0;padding:2px 0}
@@ -196,11 +198,12 @@ main.in{flex:1}
  </section>
 </div>
 
-<div class="fbar" id="projects">
+<div class="fslot" id="projects"><div class="fbar">
  <div class="in">
   <div class="chips" role="group" aria-label="Filter repositories by category"><button class="chip" type="button" aria-pressed="true" data-cat="all">All <b>23</b></button><button class="chip" type="button" aria-pressed="false" data-cat="Web Apps">Web Apps <b>4</b></button><button class="chip" type="button" aria-pressed="false" data-cat="AI &amp; ML">AI &amp; ML <b>5</b></button><button class="chip" type="button" aria-pressed="false" data-cat="Backend &amp; Security">Backend &amp; Security <b>5</b></button><button class="chip" type="button" aria-pressed="false" data-cat="DevTools &amp; Libraries">DevTools &amp; Libraries <b>4</b></button><button class="chip" type="button" aria-pressed="false" data-cat="Community &amp; Local">Community &amp; Local <b>5</b></button></div>
   <div class="cnt"><b id="n1">23</b> listed</div>
  </div>
+</div>
 </div>
 
 <main class="in">
@@ -456,6 +459,16 @@ main.in{flex:1}
  document.getElementById('dx').onclick=close;
  ov.addEventListener('click',function(e){if(e.target===ov)close()});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!ov.hidden)close()});
+})();
+</script>
+<script>
+(function(){
+ var slot=document.querySelector('.fslot'),fb=slot.firstElementChild;
+ function size(){if(!fb.classList.contains('stuck'))slot.style.height=fb.offsetHeight+'px'}
+ function upd(){var st=slot.getBoundingClientRect().top<=56;if(st!==fb.classList.contains('stuck'))fb.classList.toggle('stuck',st)}
+ window.addEventListener('scroll',upd,{passive:true});
+ window.addEventListener('resize',function(){size();upd()});
+ size();upd();
 })();
 </script>
 </body>
